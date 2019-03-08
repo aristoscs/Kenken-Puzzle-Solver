@@ -1,0 +1,48 @@
+/**
+*
+* @author Aristos Georgiou, ageorg08
+*
+* # Known bugs: None
+* # Space complexity of solver: O(size^2) since the solution is at recursion depth: size^2
+*     Version 1.1 handles the same logic with an iterative version making space complexity: O(1) 
+
+* # Time complexity: O(size^size) if no solution, Ω(size^2) if no backtracking into solution
+* 
+* 1) The program will try to read a file given by a user as an argument and will try to initialise
+*    the data structures, if the file is not found or in incorrect format the program will output the proper
+*    error message and exit.
+*
+* 2) After that, based on the argument which chooses the mode of the program the code will execute either
+*    the play() function or the solve() function.
+* 
+*     !MODES!
+* 2a) The method play is an interacting I/O function that allows the user to manually solve the kenken.
+* 2b) The method solve is a function that solves the kenken using a technique called recursive backtracking.
+*     
+* More about backtracking: https://www.cs.utexas.edu/~scottm/cs307/handouts/recursiveBacktrackingExplanation.htm
+*
+* To compile:     $ gcc ageorg08_kenken.c -o kenken
+* To run play():  $ ./kenken -i input.txt  , for Windows: kenken -i input.txt
+* To run solve(): $ ./kenken -s input.txt  , for Windows: kenken -s input.txt
+*
+* About input.txt format:
+* 	1) First line is the size of kenken, Cell kenken[size][size]  
+*   2) Next can follow atleast 1 up to 26 lines that will set each cage of the kenken and cell.
+*   3) A line can be of the format: 16* (1,1) (1,2) (2,2)
+*      	where 16 is the target of the cage * means the product of the points followed need to be 16.
+*      	(1,1) means the Cell on the first row and column of the kenken belongs to the group 'a' if
+*      	the line: 16* (1,1) (1,2) (2,2) is 2nd in the file after the line for the size.
+*
+* Average running time of solve() on UNI lab computers for some 4x4, 5x5, 6x6 input files:
+*	
+*   Recursive:   
+*	real	0m0.009s
+*	user	0m0.001s
+*	sys	    0m0.000s
+*
+*	Iterative:
+*	real	0m0.001s
+*	user	0m0.001s
+*	sys	    0m0.000s
+*
+*/ 
