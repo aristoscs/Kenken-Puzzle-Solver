@@ -38,7 +38,7 @@
 *   Recursive:   
 *	real	0m0.009s
 *	user	0m0.001s
-*	sys	    0m0.000s
+*	sys	  0m0.000s
 *
 *	Iterative:
 *	real	0m0.001s
